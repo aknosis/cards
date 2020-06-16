@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
+    <img id="logo" alt="Logo" src="/cards/AS.svg">
+    <h2>
       Poker, built with JS and Vue live at <a href="https://www.twitch.tv/aknosis">https://www.twitch.tv/aknosis</a>
-    </p>
+    </h2>
     <h3>References</h3>
     <ul>
       <li><a href="https://www.me.uk/cards/" target="_blank" rel="noopener">SVG Card Generator</a></li>
@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Home',
   props: {
     msg: String
   }
@@ -22,6 +22,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+#logo {
+  max-height: 250px;
+}
 h3 {
   margin: 40px 0 0;
 }

@@ -1,17 +1,29 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/cards/AS.svg">
-    <HelloWorld msg="Let's Play!"/>
+    <component :is="surface"></component>
+    <p v-if="playing">
+      <button @click="play">Let's Play!</button>
+    </p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Home from './components/Home.vue';
+import Game from './components/Game.vue';
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Home
+  },
+  data: () => ({
+    surface: Game,
+    playing: true
+  }),
+  methods: {
+    play() {
+      this.playing = false;
+      this.surface = Game;
+    }
   }
 }
 </script>
